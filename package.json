@@ -7,8 +7,7 @@
     "express-session": "^1.17.3",
     "express-validator": "^7.0.1",
     "method-override": "^3.0.0",
-    "multer": "^1.4.5-lts.1",
-    "nodemon": "^3.0.1"
+    "multer": "^1.4.5-lts.1"
   },
   "name": "grupo_10_",
   "description": "La Tienda del 10",
@@ -19,5 +18,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }

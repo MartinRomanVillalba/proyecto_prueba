@@ -16,10 +16,12 @@ app.set('views', path.join(__dirname, 'views'))
 
 const mainRoutes = require('./routes/main');
 const productsRouter = require('./routes/products');
+const usersRouter = require('./routes/users');
 
 
 app.use('/', mainRoutes)
 app.use('/products', productsRouter);
+app.use('/users', usersRouter)
 
 app.listen(port, () => {
     console.log(`Escuchando en el puerto ${port}`);
