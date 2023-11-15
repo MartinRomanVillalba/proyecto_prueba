@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('partials/head', {styles: ["index"]}) %>
+  <body>
+    <%- include('partials/header') %>
+
+    <main>
+      <section class="slider">
+        <div class="banner-img">
+          <img
+            src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/story-snipped-cielo-ar-d_tcm216-1036009.jpg"
+            alt="nohayimagen"
+          />
+          <i class="fas fa-ellipsis-h"></i>
+          <div class="flechas">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="marcas">
+          <div class="adidas">
+            <img
+              src="https://1000marcas.net/wp-content/uploads/2019/11/Adidas-logo.jpg"
+              alt="logo-adidas"
+            />
+          </div>
+          <div class="nike">
+            <img
+              src="https://nikearprod.vtexassets.com/assets/vtex/assets-builder/nikearprod.store/2.0.63/icons/Assets_for_off%20platform/swoosh___33f7ffaf2fc124733c2c4a60a12a1160.svg"
+              alt="logo-nike"
+            />
+          </div>
+          <div class="puma">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/88/Puma-Logo.png"
+              alt="logo-puma"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="ingresos">
+        <h3>Últimos ingresos</h3>
+        <div class="productos">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTSv1BzUrA6AQKu6KODk3O1YnnH8UyIKcwQ&usqp=CAU"
+            alt="camiseta"
+          />
+          <div class="dots">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div class="flechas">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+        <p>Camiseta Inter</p>
+        <p>$6000</p>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

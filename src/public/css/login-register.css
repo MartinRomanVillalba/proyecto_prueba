@@ -1,0 +1,55 @@
+main{
+    background-color: #000 ;
+    color: #fff;
+}
+.formularios{
+    text-align: center;
+    padding: 10px;
+}
+main input{
+  width: 50%;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+}
+main button{
+    padding: 8px;
+    margin: 7px;
+    background-color: #63bbf2;
+    border: none;
+    border-radius: 12px;
+}
+
+.panel{
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+}
+.olvidaste a{
+    text-decoration: none;
+    color: #63bbf2;
+}
+
+@media (min-width: 769px) {
+    .formularios {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    main {
+        padding-bottom: 10%;
+    }
+
+    main form {
+        width: 50%;
+    }
+
+    main input{
+        width: 70%;
+    }
+
+   
+}

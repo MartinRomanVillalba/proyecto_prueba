@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Roboto:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+main {
+    background-color: #000;
+    color: #fff;
+    padding: 5%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vaciar_carrito {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3%;
+}
+
+.vaciar_carrito button {
+    padding: 1%;
+    background-color: #63bbf2;
+    border: none;
+    border-radius: 4px;
+}
+
+.producto_carrito {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1%;
+    border: #fff solid 3px;
+}
+
+.producto_carrito img {
+    width: 20%;
+}
+
+.nombre-prod_carrito {
+    display: none;
+}
+
+.boton-cantidad_carrito {
+    width: 20%;
+    text-align: center;
+    align-self: center;
+}
+
+.menos-mas_carrito {
+    width: 25%;
+    height: 25%;
+    background-color: #63bbf2;
+    border: none;
+    border-radius: 3px;
+}
+
+.cantidad-articulo_carrito {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.precio-articulo_carrito {
+    width: 50%;
+    font-weight: bold;
+    text-align: end;
+    align-self: end;
+}
+
+.envio_carrito {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5% 1%;
+    border: #fff solid 3px;
+    margin: 10% 0;
+}
+
+.ubicacion_carrito {
+    width: 25%;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding-left: 1%;
+}
+
+.precio-envio_carrito {
+    font-weight: bold;
+}
+
+.pago_carrito {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5% 1%;
+    border: #fff solid 3px;
+}
+
+.titulo-pago_carrito {
+    font-weight: bold;
+
+}
+
+.metodo-pago_carrito {
+    font-size: 0.6rem;
+    align-self: center;
+}
+
+.total_carrito {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+.pagar_carrito {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3%;
+}
+
+.pagar_carrito button {
+    width: 35%;
+    padding: 3%;
+    background-color: #63bbf2;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer{
+    display: flex;
+    padding: 5%;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo{
+    width: 40%;
+}
+
+.logo i{
+    font-size: 5rem;
+}
+
+.informacion-footer{
+    width: 60%;
+}
+
+.redes{
+    display: flex;
+    margin-bottom: 4%;
+}
+
+.redes a{
+    width: 20%;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.informacion-footer p{
+    margin: 2% 0;
+}
+
+
+@media (min-width: 769px){
+    header{
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2%
+    }
+
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    .logo-header {
+        width: 10%;
+        font-size: 4rem;
+    }
+
+    .barra-busqueda {
+        width: 40%;
+        order: 2;
+    }
+
+    .barra-busqueda input {
+        width: 90%;
+    }
+
+    .barra-busqueda button {
+        width: 10%
+    }
+
+    .iconoPerfil {
+        width: 4%;
+        order: 3;
+        font-size: 1.5rem;
+    }
+
+    .carritoFavoritos {
+        display: inline-block;
+        width: 6%;
+        order: 4;
+        text-align: right;
+        font-size: 1.5rem;
+    }
+
+    .vaciar_carrito {
+        margin-bottom: 2%;
+    }
+
+    .producto_carrito img {
+        width: 16%;
+    }
+
+    .nombre-prod_carrito {
+        display: block;
+        font-size: 1.7rem;
+        align-self: center;
+    }
+
+    .menos-mas_carrito {
+        width: 40px;
+        height: 40px;
+        font-size: 1.7rem; 
+    }
+
+    .cantidad-articulo_carrito {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 1.5rem;
+    }
+
+    .precio-articulo_carrito {
+        width: 25%;
+        font-size: 1.7rem;
+    }
+
+    .envio_carrito {
+        margin: 5% 0;
+    }
+
+    .titulo-envio_carrito {
+        font-size: 2rem;
+    }
+
+    .ubicacion_carrito {
+        font-size: 1.1rem;
+    }
+
+    .precio-envio_carrito {
+        font-size: 1.7rem;
+    }
+
+    .titulo-pago_carrito {
+        font-size: 2rem;
+    }
+
+    .metodo-pago_carrito {
+        font-size: 1.5rem;
+        margin-right: 5%;
+    }
+
+    .titulo-total_carrito {
+        font-size: 2.5rem;
+    }
+
+    .pagar_carrito button {
+        width: 25%;
+        font-size: 2rem;
+    }
+
+    .logo i {
+        font-size: 8rem;
+    }
+
+    .redes {
+        margin-bottom: 7%;
+    }
+
+    .redes a {
+        font-size: 2rem;
+    }
+
+    .informacion-footer p {
+        font-size: 1.5rem;
+    }
+}

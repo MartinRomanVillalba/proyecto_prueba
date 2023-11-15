@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head', {styles: ["productCreate-edit"]}) %>
+    <body>
+        <%-include('../partials/header') %>
+        <main class="">
+            <section class="formulario-edit-contenedor">
+                <form class="formulario-edit" action="/products" method="POST">
+                    <h2 class="titulo-edit">Cargar nuevos productos</h2>
+                    <div class="form-contenedor-edit">
+                        <input class="input" placeholder="Nombre del producto" type="text" name="nombreProducto" id="nombreProducto" required>
+                    </div>
+                    <div class="form-contenedor-edit">
+                        <input class="input" placeholder="Descripción del producto" type="text" name="descripcionProducto" id="descripcionProducto" required>
+                    </div>
+                    <div class="form-contenedor-edit">
+                        <h4 class="tituloImagen-edit">Imagen del producto</h4>
+                        <input type="file" name="imagenProducto" id="imagenProducto" accept="image/*">
+                    </div>
+                    <div class="form-contenedor-edit">
+                        <label class="tituloCategoria-edit" for="categoria">Categoría:</label>
+                        <select class="categorias" name="categoria" id="categoria">
+                            <option value="Equipos nacionales">Equipos nacionales</option>
+                            <option value="Equipos internacionales">Equipos internacionales</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-contenedor-edit">
+                        <input class="input" placeholder="Talles" type="text" name="talles" id="talles" required>
+                    </div>
+                    <div class="form-contenedor-edit">
+                        <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto" required>
+                    </div>
+                    <div class="form-contenedor-botones-edit">
+                        <button type="submit"><a href="/">Enviar</a></button>
+                        <button type="reset">Borrar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <%-include('../partials/footer') %>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Roboto:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+main{
+    background-color: #000;
+    color: #fff;
+    padding: 5%;
+    margin: auto;
+}
+
+.banner-img{
+    width: 100%;
+}
+
+.banner-img img{
+    width: 100%;
+}
+
+.fas.fa-ellipsis-h{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: -20px;
+}
+
+.flechas{
+    width: 100%;
+    position: relative;
+    top: -135px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.marcas img{
+    height: 60px;
+    width: 70px;
+    background-color: white;
+}
+
+.marcas{
+    display: flex;
+    justify-content: space-around;
+}
+
+main section h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+main section p{
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+
+.productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 275px;
+}
+
+.productos img{
+    border-radius: 40px;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.productos .flechas{
+    width: 100%;
+    position: relative;
+    top: -135px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+@media (min-width: 1200px){
+    .flechas{
+        position: relative;
+        top: -500px;
+        color: black;
+    }
+
+    .fas.fa-ellipsis-h{
+        color: black;
+    }
+
+    .productos .flechas{
+        color: #fff;
+    }
+    
+    .productos .fas.fa-ellipsis-h{
+        color: #fff;
+    }
+
+    .ingresos{
+        margin-top: 50px;
+    }
+
+    .ingresos p{
+        font-size: 30px;
+    }
+}

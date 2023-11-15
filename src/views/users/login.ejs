@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La tienda del 10</title>
+</head>
+<body>
+    <%-include('../partials/head', {styles: ["login-register"]}) %>
+
+    <body>
+      <%-include('../partials/header') %>
+      <main>
+        <div class="panel">
+          <h2>Panel de cuenta</h2>
+        </div>
+        <section class="formularios">
+          <form action="/" method="GET">
+            <h3>Ingresar</h3>
+            <div>
+              <input placeholder="Correo electrónico" type="email" name="email" id="email">
+            </div>
+            <div>
+              <input placeholder="Contraseña" type="password" name="password" id="password">
+            </div>
+            <div>
+              <button>Ingresar con Google</button>
+              <button type="submit">Iniciar Sesión</button>
+            </div>
+            <div class="olvidaste">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+        </main>
+          <%-include('../partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head', {styles: ["productDetail"]}) %>
+    <body>
+        <%-include('../partials/header') %>
+        <main>
+            <section class="producto">
+                <div class="imagenes-producto">
+                    <img class="imagenPrincipal" src="/images/products/<%= product.imagenProducto %>" alt="foto producto">
+                    <div class="imagenesMiniatura">
+                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/02f90f6570a148c1a136af7300dc1ac4_9366/Camiseta_titular_Argentina_3_estrellas_2022_Blanco_IB3593_21_model.jpg" alt="foto pequeña">
+                        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/75eb292bbfa446aebcbdaf7300dc2382_9366/Camiseta_titular_Argentina_3_estrellas_2022_Blanco_IB3593_23_hover_model.jpg" alt="foto pequeña">
+                        <img src="https://images.pagina12.com.ar/styles/focal_content_1200x1050/public/2022-12/683419-48362-tri-2520star.jpg?h=9651c94c&itok=3y9IqDUes" alt="foto pequeña">
+                        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/282132a9483a49be8b31af7300dc0dd3_9366/Camiseta_titular_Argentina_3_estrellas_2022_Blanco_IB3593_42_detail.jpg" alt="foto pequeña">
+                    </div>
+                </div>
+                <div class="infoGeneral-producto">
+                    <h2><%= locals.product && product.nombreProducto %></h2>
+                    <p>$ <%= product.precioProducto %></p>
+                    <div class="talles">
+                        <button type="submit" value="S">S</button>
+                        <button type="submit" value="M">M</button>
+                        <button type="submit" value="L">L</button>
+                        <button type="submit" value="XL">XL</button>
+                    </div>
+                    <a href="#">Guía de talles</a>
+                    <div class="botonesCompra">
+                        <button type="submit">Añadir al carrito</button>
+                        <button type="submit">Comprar ahora</button>
+                    </div>
+                </div>
+            </section>
+            <section class="infoDetallada">
+                <h4>Más información</h4>
+                <ul class="detalles">
+                    <li>Ajuste clásico</li>
+                    <li>Cuello redondo acanalado con estrellas aplicadas</li>
+                    <li>Tejido de punto doble 100 % poliéster reciclado</li>
+                    <li>Tecnología de absorción AEROREADY</li>
+                    <li>Paneles de malla bajo los brazos</li>
+                    <li>Color del artículo: Eqt Yellow / Mystery Ink</li>
+                    <li>Número de artículo: HT3683</li>
+                </ul>
+            </section>
+            <a href="/products/<%= product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
+        </main>
+        <%-include('../partials/footer') %>
+    </body>
+</html>

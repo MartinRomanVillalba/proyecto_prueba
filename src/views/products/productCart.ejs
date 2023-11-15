@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%-include('../partials/head', {styles: ["productCart"]}) %>
+    <body>
+      <%-include('../partials/header') %>
+      <main>
+        <section class="vaciar_carrito">
+          <button type="reset">Vaciar Carrito</button>
+        </section>
+        <section class="producto_carrito">
+            <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="Camiseta Argentina">
+            <h4 class="nombre-prod_carrito">Camiseta Argentina - Talle L</h4>
+            <div class="boton-cantidad_carrito">
+              <button class="menos-mas_carrito">-</button><span class="cantidad-articulo_carrito">1</span><button class="menos-mas_carrito">+</button>
+            </div>
+            <p class="precio-articulo_carrito">$10000</p>
+        </section>
+        <section class="envio_carrito">
+            <h4 class="titulo-envio_carrito">Envío</h4>
+            <input class="ubicacion_carrito" placeholder="Dirección" type="search" name="barra-busqueda"/>
+            <input class="ubicacion_carrito" placeholder="Código postal" type="search" name="barra-busqueda"/>
+            <p class="precio-envio_carrito">$200</p>
+        </section>
+        <section class="pago_carrito">
+            <h4 class="titulo-pago_carrito">Forma de pago</h4>
+            <div class="metodo-pago_carrito"><input type="radio" name="formaPago" id="credito">T. crédito</div>
+            <div class="metodo-pago_carrito"><input type="radio" name="formaPago" id="debito">T. débito</div>
+            <div class="metodo-pago_carrito"><input type="radio" name="formaPago" id="transferencia">Transferencia</div>
+        </section>
+        <section class="total_carrito">
+          <h4 class="titulo-total_carrito">Total:</h4>
+          <h4 class="titulo-total_carrito">$10200</h4>
+        </section>
+        <section class="pagar_carrito">
+          <button type="submit">Pagar</button>
+        </section>
+    </main>
+      <%-include('../partials/footer') %>
+    </body>
+</html>
