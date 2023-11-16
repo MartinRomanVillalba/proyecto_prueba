@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La tienda del 10</title>
-</head>
-<body>
     <%-include('../partials/head', {styles: ["login-register"]}) %>
 
     <body>
@@ -15,7 +9,7 @@
           <h2>Panel de cuenta</h2>
         </div>
         <section class="formularios">
-          <form action="/" method="GET">
+          <form method="POST" action="/users/login">
             <h3>Ingresar</h3>
             <div>
               <input placeholder="Correo electrónico" type="email" name="email" id="email">
@@ -30,6 +24,8 @@
             <div class="olvidaste">
             <a href="#">¿Olvidaste tu contraseña?</a>
           </div>
+          </form>
+          </section>
         </main>
           <%-include('../partials/footer') %>
 </body>

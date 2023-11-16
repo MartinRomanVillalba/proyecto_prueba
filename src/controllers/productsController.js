@@ -55,6 +55,9 @@ const controller = {
         products.splice(indexProduct, 1)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
         res.redirect("/products");
+    },
+    cart(req,res){
+        res.render('products/productCart')
     }
 }
 

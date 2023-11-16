@@ -10,34 +10,28 @@
       <h2>Panel de cuenta</h2>
     </div>
     <section class="formularios">
-      <form action="/" method="GET">
+      <form method="POST" action="/users/register" enctype="multipart/form-data">
         <div>
         <h3>Registrate</h3>
       </div>
         <div>
-          <input placeholder="Nombre" type="text">
+          <input placeholder="Nombre" type="text" name="fullName">
         </div>
         <div>
-          <input placeholder="Apellido" type="text">
+          <input placeholder="Correo electrónico" type="email" name="email">
         </div>
         <div>
-          <input placeholder="Correo electrónico" type="email">
+          <input placeholder="Contraseña" type="password" name="password">
         </div>
         <div>
-          <input placeholder="Contraseña" type="password">
-        </div>
-        <div>
-          <input placeholder="Confirmar contraseña" type="password">
-        </div>
-        <div>
-          <input type="file" accept="image/*">
+          <input type="file" accept="image/*" name="avatar">
         </div>
         <div>
           <button>Registrarse con Google</button>
           <button type="submit">Registrarse</button>
         </div>
-      </form>
-    </section>
+    </form>
+  </section>
   </main>
   <%-include('../partials/footer') %>
 </body>

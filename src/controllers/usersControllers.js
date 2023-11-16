@@ -1,9 +1,89 @@
+const bcryptjs = require('bcryptjs');
+const {validationResult} = require('express-validator');
+
+const User = require('../models/User');
+
 const controller = {
-    registerGet(req, res){
+    register(req, res){
         res.render('users/register')
     },
-    loginGet(req, res){
+    processRegister(req, res){
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){
+            return res.render('users/register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
+        let userInDb = User.findByField('email', req.body.email);
+
+        if(userInDb){
+            return res.render('users/register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            })
+        }
+
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file.filename
+        }
+
+        let userCreated = User.create(userToCreate)
+
+        return res.redirect('users/login')
+    },
+    login(req, res){
         res.render('users/login')
+    },
+    loginProcess(req, res){
+        let userToLogin = User.findByField('email', req.body.email);
+        
+        if(userToLogin){
+            let isOkThePassWord = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(isOkThePassWord){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60})
+                }
+
+                return res.redirect('users/profile')
+            }
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son inválidas'
+                    }
+                }
+            });
+        }
+
+        return res.render('users/login',{
+            errors: {
+                email: {
+                    msg: 'No se encuentra este email en nuestra base de datos'
+                }
+            }
+        });
+    },
+    profile(req, res){
+        return res.render('users/profile', {
+            user: req.session.userLogged  
+        });
+    },
+    logout(req, res){
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/')
     }
 }
 
