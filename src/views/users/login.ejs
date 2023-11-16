@@ -13,6 +13,11 @@
             <h3>Ingresar</h3>
             <div>
               <input placeholder="Correo electrónico" type="email" name="email" id="email">
+              <% if (locals.errors && errors.email) { %>
+                <div>
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>
             </div>
             <div>
               <input placeholder="Contraseña" type="password" name="password" id="password">
@@ -20,6 +25,7 @@
             <div>
               <button>Ingresar con Google</button>
               <button type="submit">Iniciar Sesión</button>
+              <input type="checkbox" name="remember_user">Recordar usuario
             </div>
             <div class="olvidaste">
             <a href="#">¿Olvidaste tu contraseña?</a>

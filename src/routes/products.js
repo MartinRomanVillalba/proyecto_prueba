@@ -2,10 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 const productsController = require('../controllers/productsController');
+const uploadProduct = require('../middlewares/multerProductMiddleware');
 
 router.get('/', productsController.index)
 
-router.get('/create', productsController.create)
+router.get('/create',productsController.create)
 router.post('/', productsController.store)
 
 router.get('/detail/:id', productsController.detail)

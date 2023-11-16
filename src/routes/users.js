@@ -8,8 +8,6 @@ const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
-// router.get('/', usersController.index);
-
 router.get('/register', guestMiddleware ,usersController.register)
 
 router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister)

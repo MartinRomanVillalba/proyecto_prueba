@@ -10,21 +10,39 @@
       <h2>Panel de cuenta</h2>
     </div>
     <section class="formularios">
+      <h3>Registrate</h3>
       <form method="POST" action="/users/register" enctype="multipart/form-data">
         <div>
-        <h3>Registrate</h3>
-      </div>
-        <div>
-          <input placeholder="Nombre" type="text" name="fullName">
+          <input placeholder="Nombre" type="text" name="fullName" class="<%= locals.errors && errors.fullName ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.fullName : null %>" autocomplete="off">
+          <% if(locals.errors && errors.fullName){ %>
+            <div>
+              <%= errors.fullName.msg %>
+            </div>
+            <% } %>
         </div>
         <div>
-          <input placeholder="Correo electrónico" type="email" name="email">
+          <input placeholder="Correo electrónico" type="email" name="email" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+          <% if(locals.errors && errors.email) { %>
+            <div>
+              <%= errors.email.msg %>
+            </div>
+         <% }%>
         </div>
         <div>
-          <input placeholder="Contraseña" type="password" name="password">
+          <input placeholder="Contraseña" type="password" name="password" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
+          <% if (locals.errors && errors.password) { %>
+            <div>
+              <%= errors.password.msg %>
+            </div>
+          <% } %>
         </div>
         <div>
-          <input type="file" accept="image/*" name="avatar">
+          <input type="file" accept="image/*" name="avatar" class="<%= locals.errors && errors.avatar ? 'is-invalid' : null %>">
+          <% if (locals.errors && errors.avatar) { %>
+            <div class="text-danger">
+              <%= errors.avatar.msg %>
+            </div>
+          <% } %>
         </div>
         <div>
           <button>Registrarse con Google</button>

@@ -6,31 +6,13 @@ const path = require('path');
 
 
 const User = require('../models/User');
-// const usersDataFilePath = path.join(__dirname, '../data/users.json')
-// function getUsers(){
-//     return JSON.parse(fs.readFileSync(usersDataFilePath, 'utf-8'))
-// }
+
 
 const controller = {
-    // index(req, res){
-    //     if(req.session.user){
-    //         return res.redirect('users/profile')
-    //     }
-    //     return res.render('index')
-    // },
     register(req, res){
         res.render('users/register')
     },
     processRegister(req, res){
-        // const users = getUsers();
-        // const user = {
-        //     id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
-        //     ...req.body,
-        //     password: bcrypt.hashSync(req.body.password, 10)
-        // }
-        // users.push(user)
-        // fs.writeFileSync(usersDataFilePath, JSON.stringify(users, null, 4))
-        // return res.redirect('/')
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0){
@@ -61,31 +43,10 @@ const controller = {
 
         let userCreated = User.create(userToCreate)
 
-        return res.redirect('users/login')
+        return res.redirect('login')
     },
     login(req, res){
         return res.render('users/login')
-        // const users = getUsers()
-        // const user = users.find((element) => element.email === req.body.email)
-        // const errors = {
-        //     unauthorized: {
-        //         msg: 'Usuario y/o contraseña inválidos'
-        //     }
-        // }
-        // if(!user){
-        //     return res.render('index', {errors})
-        // }
-        // if(!bcrypt.compareSync(req.body.password, user.password)){
-        //     return res.render('index', {errors})
-        // }
-        // req.session.user = {
-        //     timestamp: Date.now(),
-        //     id: user.id,
-        //     fillName: user.fullName,
-        //     email: user.email,
-        //     avatar: user.avatar
-        // }
-        // res.cookie('fullName', req.body.fullName)
     },
     loginProcess(req, res){
         let userToLogin = User.findByField('email', req.body.email);
@@ -100,7 +61,7 @@ const controller = {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60})
                 }
 
-                return res.redirect('/profile')
+                return res.redirect('profile')
             }
             return res.render('users/login', {
                 errors: {

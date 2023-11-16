@@ -211,39 +211,9 @@
  },
  {
   "id": 31,
-  "fullName": "Tincho villalba",
+  "fullName": "Tincho Villalba",
   "email": "romantincho@gmail.com",
-  "password": "$2a$10$z3sWaNDlt4GyDOBuSdg1quwOvwiQgTOwnz/Dbn3N449V9i/ERar9y"
- },
- {
-  "id": 32,
-  "fullName": "Tincho villalba",
-  "email": "romantincho@gmail.com",
-  "password": "$2a$10$uP9v65UN/Etq2M8LF9vKVu2BcOiyHIl4TMsBRW0BqRPY10wxen3jS"
- },
- {
-  "id": 33,
-  "fullName": "asd",
-  "email": "romantincho@outlook.com",
-  "password": "$2a$10$b6tRVmo8oTr2/MehCOUmHOH040OCWfT1bP1TU1.26/ZubrLjiKIMO"
- },
- {
-  "id": 34,
-  "fullName": "asd",
-  "email": "romantincho@outlook.com",
-  "password": "$2a$10$rG2ulTOnxcKLp0ZFe20pluRIbMKs8rEKpMGlbbu4Zcv0LegxZwAv."
- },
- {
-  "id": 35,
-  "fullName": "asd",
-  "email": "asdsadsadsa@gmail.com",
-  "password": "$2a$10$YoPYYt.dYpJHx3pnfrUes.Bby5Gw0HaEEnJjR/HwsCHE/kR6Lf68q"
- },
- {
-  "id": 36,
-  "fullName": "Tincho villalba",
-  "email": "romantincho@hotmail.com",
-  "password": "$2a$10$IqVyXVo7AT2DHabgBHSrr.r13xICJvlv78b/LaZrDGORkWR0EyGmm",
-  "avatar": "avatar-1700161519766.jpg"
+  "password": "$2a$10$ZkQYFA8Ttf7CRvSryX43iufHBmNseQcNSCAUGX7VUYtSOFY9CTsNa",
+  "avatar": "avatar-1700172960326.jpg"
  }
 ]

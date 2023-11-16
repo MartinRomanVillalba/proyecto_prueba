@@ -25,7 +25,7 @@ const controller = {
         const products = getProducts()
         const productToCreate = {
           id: products[products.length - 1].id + 1,
-          image: "default-image.png",
+          imagenProducto: req.body.imagenProducto || "default-image.png",
           ...req.body,
         };
         products.push(productToCreate);

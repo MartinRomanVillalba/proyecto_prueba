@@ -440,5 +440,33 @@
     "categoria": "Equipos internacionales",
     "talles": "XXL",
     "precioProducto": "15000"
+  },
+  {
+    "id": 52,
+    "image": "default-image.png",
+    "nombreProducto": "Camiseta Boca",
+    "descripcionProducto": "Camiseta Barcelona temporada 2022",
+    "imagenProducto": "jhz2133_f_909dbcbc-f909-4303-9f1d-d2419608b6ed.png",
+    "categoria": "Equipos nacionales",
+    "talles": "XXL",
+    "precioProducto": "15000"
+  },
+  {
+    "id": 53,
+    "imagenProducto": "jhz2133_f_909dbcbc-f909-4303-9f1d-d2419608b6ed.png",
+    "nombreProducto": "Camiseta Boca123123",
+    "descripcionProducto": "Camiseta Barcelona temporada 2022",
+    "categoria": "Equipos internacionales",
+    "talles": "XXL",
+    "precioProducto": "15000"
+  },
+  {
+    "id": 54,
+    "imagenProducto": "jhz2133_f_909dbcbc-f909-4303-9f1d-d2419608b6ed.png",
+    "nombreProducto": "Camiseta Boca12312312312",
+    "descripcionProducto": "Camiseta Barcelona temporada 2022",
+    "categoria": "Equipos internacionales",
+    "talles": "XXL",
+    "precioProducto": "1500000"
   }
 ]
