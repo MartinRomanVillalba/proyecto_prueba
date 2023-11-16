@@ -13,7 +13,7 @@ app.use(session({
 }))
 
 app.use(cookieParser())
-// app.use(userLoggedMiddleware)
+app.use(userLoggedMiddleware)
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
